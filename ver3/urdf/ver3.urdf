@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ver3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00124089672740096 0.00160431802693894 0.0600335131136036"
+        rpy="0 0 0" />
+      <mass
+        value="1.86635296044995" />
+      <inertia
+        ixx="0.00675827886931502"
+        ixy="-3.74725692037023E-11"
+        ixz="-1.02502938233683E-09"
+        iyy="0.0315339712643452"
+        iyz="0.000115439256793237"
+        izz="0.035832789705326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L_wheel">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 1.1102E-16 0.002"
+        rpy="0 0 0" />
+      <mass
+        value="0.16325" />
+      <inertia
+        ixx="0.00026072"
+        ixy="-6.7763E-21"
+        ixz="-4.4681E-20"
+        iyy="0.00026072"
+        iyz="1.0376E-20"
+        izz="0.00051794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/L_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/L_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.1875 0.16378 -0.040408"
+      rpy="-1.5976 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_wheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="R_wheel">
+    <inertial>
+      <origin
+        xyz="-1.1102E-16 -1.1102E-16 -0.002"
+        rpy="0 0 0" />
+      <mass
+        value="0.16325" />
+      <inertia
+        ixx="0.00026072"
+        ixy="-1.3553E-20"
+        ixz="1.9842E-19"
+        iyy="0.00026072"
+        iyz="-8.0468E-21"
+        izz="0.00051794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/R_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/R_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.1875 -0.16956 -0.031463"
+      rpy="-1.5976 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_wheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="castercase_wheel">
+    <inertial>
+      <origin
+        xyz="3.0969E-07 0.0023604 0.046092"
+        rpy="0 0 0" />
+      <mass
+        value="0.026409" />
+      <inertia
+        ixx="5.6297E-06"
+        ixy="2.2439E-10"
+        ixz="-2.7585E-10"
+        iyy="5.8585E-06"
+        iyz="-8.6931E-07"
+        izz="6.9199E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/castercase_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/castercase_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castercase_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.315 -0.00026826 -0.0099964"
+      rpy="-3.1416 0.026829 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="castercase_wheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="wheel">
+    <inertial>
+      <origin
+        xyz="0 5.5511E-17 0.022"
+        rpy="0 0 0" />
+      <mass
+        value="0.047294" />
+      <inertia
+        ixx="9.5074E-06"
+        ixy="1.0588E-21"
+        ixz="-5.8895E-22"
+        iyy="9.5074E-06"
+        iyz="-9.4629E-22"
+        izz="1.4188E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ver3/meshes/wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.021984 0.023015 0.08484"
+      rpy="1.5708 0 1.5701" />
+    <parent
+      link="castercase_wheel" />
+    <child
+      link="wheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>
